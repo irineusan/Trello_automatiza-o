@@ -1,0 +1,594 @@
+{
+	"id": "1f111721-8d55-43ad-8408-2d3e3dda2f2c",
+	"name": "Trello",
+	"allTests": [],
+	"timestamp": "2019-10-23T03:51:32.828Z",
+	"collection_id": "7be3bc04-c1a8-4d93-8452-31ea76c5acbe",
+	"folder_id": 0,
+	"target_type": "collection",
+	"environment_id": "e61eddde-e695-41c3-b7bb-e9ed6d99381e",
+	"data": [],
+	"delay": 0,
+	"count": 1,
+	"collection": {
+		"id": "7be3bc04-c1a8-4d93-8452-31ea76c5acbe",
+		"name": "Trello",
+		"order": [
+			"301dbac1-9bed-43c8-9eaf-822dd99dbecf",
+			"1ba7e9fd-acae-468e-ba55-148caa135376",
+			"b3f63809-7fa2-4b42-80f4-20205a949181",
+			"14adb9bc-0395-43d1-88f8-c4f6f9d088fb",
+			"39c44e75-9fe1-454f-82ce-03631d20b130",
+			"0769770f-e15e-4f3e-b9d2-69496823a502",
+			"5a2beaf4-f618-4f34-b662-800b572aac4c",
+			"3ba4dc24-2719-4723-beb7-cf58d9bf41f2",
+			"d27d610e-3c30-4034-aa93-b1a07630f0ce",
+			"0efd705e-4112-43fa-abd2-097517221277"
+		],
+		"folders_order": [],
+		"isFavorite": false
+	},
+	"folder": null,
+	"environment": null,
+	"globals": [
+		{
+			"key": "echo_digest_nonce",
+			"value": "6I48R741xBObsJ1HrUdUMR7nEDCT2MU9",
+			"enabled": true
+		},
+		{
+			"key": "echo_digest_realm",
+			"value": "Users",
+			"enabled": true
+		}
+	],
+	"results": [
+		{
+			"name": "GET_Token_key",
+			"id": "301dbac1-9bed-43c8-9eaf-822dd99dbecf",
+			"url": "https://api.trello.com/1/members/me/boards?key=7ca4341982c28aeb84d93fb83705f260&token=3b6fd16b7d538ca0b3b528c125867180b052f991bb383d8d29a4411650f2c68d",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"307"
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			],
+			"time": "307",
+			"totalRequestTime": "307",
+			"iterationResults": {}
+		},
+		{
+			"name": "Autenticação token sucesso",
+			"id": "1ba7e9fd-acae-468e-ba55-148caa135376",
+			"url": "https://api.trello.com/1/members/me/boards?key=564ea3684b7b5ed843cb672fea927370&token=e0898aa0e2f1550207a3a3738a56805cfd82f900cfc7408abbccb422879f3e27",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"224"
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			],
+			"time": "224",
+			"totalRequestTime": "224",
+			"iterationResults": {}
+		},
+		{
+			"name": "Autenticação token erro",
+			"id": "b3f63809-7fa2-4b42-80f4-20205a949181",
+			"url": "https://api.trello.com/1/members/me/boards?key=1&token=e0898aa0e2f1550207a3a3738a56805cfd82f900cfc7408abbccb422879f3e27",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized",
+				"detail": {
+					"name": "Unauthorized",
+					"detail": "Similar to 403 Forbidden, but specifically for use when authentication is possible but has failed or not yet been provided. The response must include a WWW-Authenticate header field containing a challenge applicable to the requested resource."
+				}
+			},
+			"tests": {
+				"Status code is 401": true
+			},
+			"testPassFailCounts": {
+				"Status code is 401": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"236"
+			],
+			"allTests": [
+				{
+					"Status code is 401": true
+				}
+			],
+			"time": "236",
+			"totalRequestTime": "236",
+			"iterationResults": {}
+		},
+		{
+			"name": "Criação card sucesso",
+			"id": "14adb9bc-0395-43d1-88f8-c4f6f9d088fb",
+			"url": "https://api.trello.com/1/cards?idList=5af4e5fb235866033fb07c77&keepFromSource=all&key=564ea3684b7b5ed843cb672fea927370&token=e0898aa0e2f1550207a3a3738a56805cfd82f900cfc7408abbccb422879f3e27",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"350"
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			],
+			"time": "350",
+			"totalRequestTime": "350",
+			"iterationResults": {}
+		},
+		{
+			"name": "Criação card erro",
+			"id": "39c44e75-9fe1-454f-82ce-03631d20b130",
+			"url": "https://api.trello.com/1/cards?idList=&keepFromSource=all&key=564ea3684b7b5ed843cb672fea927370&token=e0898aa0e2f1550207a3a3738a56805cfd82f900cfc7408abbccb422879f3e27",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"Status code is 404": false
+			},
+			"testPassFailCounts": {
+				"Status code is 404": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				"453"
+			],
+			"allTests": [
+				{
+					"Status code is 404": false
+				}
+			],
+			"time": "453",
+			"totalRequestTime": "453",
+			"iterationResults": {}
+		},
+		{
+			"name": "Busca de novos cards",
+			"id": "0769770f-e15e-4f3e-b9d2-69496823a502",
+			"url": "https://api.trello.com/1/boards/5af4e5fb235866033fb07c76?actions=all&boardStars=none&cards=none&card_pluginData=false&checklists=none&customFields=false&fields=name%2Cdesc%2CdescData%2Cclosed%2CidOrganization%2Cpinned%2Curl%2CshortUrl%2Cprefs%2ClabelNames&lists=open&members=none&memberships=none&membersInvited=none&membersInvited_fields=all&pluginData=false&organization=false&organization_pluginData=false&myPrefs=false&tags=false&key=564ea3684b7b5ed843cb672fea927370&token=e0898aa0e2f1550207a3a3738a56805cfd82f900cfc7408abbccb422879f3e27",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"301"
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			],
+			"time": "301",
+			"totalRequestTime": "301",
+			"iterationResults": {}
+		},
+		{
+			"name": "Buscando card",
+			"id": "5a2beaf4-f618-4f34-b662-800b572aac4c",
+			"url": "https://api.trello.com/1/cards/5dafbce6a199793c53bb3054/board?fields=all&key=564ea3684b7b5ed843cb672fea927370&token=e0898aa0e2f1550207a3a3738a56805cfd82f900cfc7408abbccb422879f3e27",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found",
+				"detail": {
+					"name": "Not Found",
+					"detail": "The requested resource could not be found but may be available again in the future. Subsequent requests by the client are permissible."
+				}
+			},
+			"tests": {
+				"Status code is 200": false
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				"199"
+			],
+			"allTests": [
+				{
+					"Status code is 200": false
+				}
+			],
+			"time": "199",
+			"totalRequestTime": "199",
+			"iterationResults": {}
+		},
+		{
+			"name": "Atualizando card sucesso",
+			"id": "3ba4dc24-2719-4723-beb7-cf58d9bf41f2",
+			"url": "https://api.trello.com/1/cards/5dafbfae722f4731384428ed/board?fields=all&key=564ea3684b7b5ed843cb672fea927370&token=e0898aa0e2f1550207a3a3738a56805cfd82f900cfc7408abbccb422879f3e27",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found",
+				"detail": {
+					"name": "Not Found",
+					"detail": "The requested resource could not be found but may be available again in the future. Subsequent requests by the client are permissible."
+				}
+			},
+			"tests": {
+				"Status code is 200": false
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				"201"
+			],
+			"allTests": [
+				{
+					"Status code is 200": false
+				}
+			],
+			"time": "201",
+			"totalRequestTime": "201",
+			"iterationResults": {}
+		},
+		{
+			"name": "Deletando card sucesso",
+			"id": "d27d610e-3c30-4034-aa93-b1a07630f0ce",
+			"url": "https://api.trello.com/1/cards/5dafbf7a9895b844403bb3f3?key=564ea3684b7b5ed843cb672fea927370&token=e0898aa0e2f1550207a3a3738a56805cfd82f900cfc7408abbccb422879f3e27",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found",
+				"detail": {
+					"name": "Not Found",
+					"detail": "The requested resource could not be found but may be available again in the future. Subsequent requests by the client are permissible."
+				}
+			},
+			"tests": {
+				"Status code is 200": false
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				"663"
+			],
+			"allTests": [
+				{
+					"Status code is 200": false
+				}
+			],
+			"time": "663",
+			"totalRequestTime": "663",
+			"iterationResults": {}
+		},
+		{
+			"name": "Deletando card erro",
+			"id": "0efd705e-4112-43fa-abd2-097517221277",
+			"url": "https://api.trello.com/1/cards/5dafbf7a9895b844403bb3f3?key=564ea3684b7b5ed843cb672fea927370&token=e0898aa0e2f1550207a3a3738a56805cfd82f900cfc7408abbccb422879f3e27",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found",
+				"detail": {
+					"name": "Not Found",
+					"detail": "The requested resource could not be found but may be available again in the future. Subsequent requests by the client are permissible."
+				}
+			},
+			"tests": {
+				"Status code is 404": true
+			},
+			"testPassFailCounts": {
+				"Status code is 404": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"211"
+			],
+			"allTests": [
+				{
+					"Status code is 404": true
+				}
+			],
+			"time": "211",
+			"totalRequestTime": "211",
+			"iterationResults": {}
+		}
+	],
+	"totalPass": 6,
+	"totalFail": 4,
+	"totalTime": 3145,
+	"lifecycle": "done",
+	"requests": [
+		{
+			"name": "GET_Token_key",
+			"id": "301dbac1-9bed-43c8-9eaf-822dd99dbecf",
+			"url": "https://api.trello.com/1/members/me/boards?key=7ca4341982c28aeb84d93fb83705f260&token=3b6fd16b7d538ca0b3b528c125867180b052f991bb383d8d29a4411650f2c68d",
+			"time": "2019-10-23T03:51:32.828Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Autenticação token sucesso",
+			"id": "1ba7e9fd-acae-468e-ba55-148caa135376",
+			"url": "https://api.trello.com/1/members/me/boards?key=564ea3684b7b5ed843cb672fea927370&token=e0898aa0e2f1550207a3a3738a56805cfd82f900cfc7408abbccb422879f3e27",
+			"time": "2019-10-23T03:51:32.828Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Autenticação token erro",
+			"id": "b3f63809-7fa2-4b42-80f4-20205a949181",
+			"url": "https://api.trello.com/1/members/me/boards?key=1&token=e0898aa0e2f1550207a3a3738a56805cfd82f900cfc7408abbccb422879f3e27",
+			"time": "2019-10-23T03:51:32.828Z",
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized",
+				"detail": {
+					"name": "Unauthorized",
+					"detail": "Similar to 403 Forbidden, but specifically for use when authentication is possible but has failed or not yet been provided. The response must include a WWW-Authenticate header field containing a challenge applicable to the requested resource."
+				}
+			},
+			"testPassFailCounts": {
+				"Status code is 401": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Criação card sucesso",
+			"id": "14adb9bc-0395-43d1-88f8-c4f6f9d088fb",
+			"url": "https://api.trello.com/1/cards?idList=5af4e5fb235866033fb07c77&keepFromSource=all&key=564ea3684b7b5ed843cb672fea927370&token=e0898aa0e2f1550207a3a3738a56805cfd82f900cfc7408abbccb422879f3e27",
+			"time": "2019-10-23T03:51:32.828Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Criação card erro",
+			"id": "39c44e75-9fe1-454f-82ce-03631d20b130",
+			"url": "https://api.trello.com/1/cards?idList=&keepFromSource=all&key=564ea3684b7b5ed843cb672fea927370&token=e0898aa0e2f1550207a3a3738a56805cfd82f900cfc7408abbccb422879f3e27",
+			"time": "2019-10-23T03:51:32.828Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Status code is 404": {
+					"pass": 0,
+					"fail": 1
+				}
+			}
+		},
+		{
+			"name": "Busca de novos cards",
+			"id": "0769770f-e15e-4f3e-b9d2-69496823a502",
+			"url": "https://api.trello.com/1/boards/5af4e5fb235866033fb07c76?actions=all&boardStars=none&cards=none&card_pluginData=false&checklists=none&customFields=false&fields=name%2Cdesc%2CdescData%2Cclosed%2CidOrganization%2Cpinned%2Curl%2CshortUrl%2Cprefs%2ClabelNames&lists=open&members=none&memberships=none&membersInvited=none&membersInvited_fields=all&pluginData=false&organization=false&organization_pluginData=false&myPrefs=false&tags=false&key=564ea3684b7b5ed843cb672fea927370&token=e0898aa0e2f1550207a3a3738a56805cfd82f900cfc7408abbccb422879f3e27",
+			"time": "2019-10-23T03:51:32.828Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Buscando card",
+			"id": "5a2beaf4-f618-4f34-b662-800b572aac4c",
+			"url": "https://api.trello.com/1/cards/5dafbce6a199793c53bb3054/board?fields=all&key=564ea3684b7b5ed843cb672fea927370&token=e0898aa0e2f1550207a3a3738a56805cfd82f900cfc7408abbccb422879f3e27",
+			"time": "2019-10-23T03:51:32.828Z",
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found",
+				"detail": {
+					"name": "Not Found",
+					"detail": "The requested resource could not be found but may be available again in the future. Subsequent requests by the client are permissible."
+				}
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 0,
+					"fail": 1
+				}
+			}
+		},
+		{
+			"name": "Atualizando card sucesso",
+			"id": "3ba4dc24-2719-4723-beb7-cf58d9bf41f2",
+			"url": "https://api.trello.com/1/cards/5dafbfae722f4731384428ed/board?fields=all&key=564ea3684b7b5ed843cb672fea927370&token=e0898aa0e2f1550207a3a3738a56805cfd82f900cfc7408abbccb422879f3e27",
+			"time": "2019-10-23T03:51:32.828Z",
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found",
+				"detail": {
+					"name": "Not Found",
+					"detail": "The requested resource could not be found but may be available again in the future. Subsequent requests by the client are permissible."
+				}
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 0,
+					"fail": 1
+				}
+			}
+		},
+		{
+			"name": "Deletando card sucesso",
+			"id": "d27d610e-3c30-4034-aa93-b1a07630f0ce",
+			"url": "https://api.trello.com/1/cards/5dafbf7a9895b844403bb3f3?key=564ea3684b7b5ed843cb672fea927370&token=e0898aa0e2f1550207a3a3738a56805cfd82f900cfc7408abbccb422879f3e27",
+			"time": "2019-10-23T03:51:32.828Z",
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found",
+				"detail": {
+					"name": "Not Found",
+					"detail": "The requested resource could not be found but may be available again in the future. Subsequent requests by the client are permissible."
+				}
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 0,
+					"fail": 1
+				}
+			}
+		},
+		{
+			"name": "Deletando card erro",
+			"id": "0efd705e-4112-43fa-abd2-097517221277",
+			"url": "https://api.trello.com/1/cards/5dafbf7a9895b844403bb3f3?key=564ea3684b7b5ed843cb672fea927370&token=e0898aa0e2f1550207a3a3738a56805cfd82f900cfc7408abbccb422879f3e27",
+			"time": "2019-10-23T03:51:32.828Z",
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found",
+				"detail": {
+					"name": "Not Found",
+					"detail": "The requested resource could not be found but may be available again in the future. Subsequent requests by the client are permissible."
+				}
+			},
+			"testPassFailCounts": {
+				"Status code is 404": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		}
+	],
+	"synced": false
+}
